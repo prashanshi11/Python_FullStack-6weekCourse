@@ -6,7 +6,7 @@
 
 📍 *Python Fundamentals and Web Basics*
 
-| Day      | Topics Covered                                                                                                                                  | Files Updated                                                                                   |
+| Day      | Topics Covered                                                                                                                               | Files Updated                                                                                   |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Mon (16) | **Introduction to Python**<br>• Overview of Python<br>• Environment Setup (Python, PIP, VS Code)<br>• First Script<br>• Simple Python Exercises | `01_intro.py`, `02_comments.py`, `03_datatypes.py`, `04_operators.py`                           |
 | Tue (17) | **Python Basics**<br>• Variables, Data Types, Operators<br>• Control Structures<br>• Functions, Scope, Modules<br>• Number Guessing Game        | `05_conditions&statements.py`, `06_variables.py`, `07_modules.py`                               |
