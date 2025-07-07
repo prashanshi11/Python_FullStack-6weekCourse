@@ -1,0 +1,21 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body bgcolor="#e6e6fa">
+    <h1>Login here</h1>
+    {% if msg %}
+        <p style="color:red;">{{ msg }}</p>
+    {% endif %}
+    <form action="/login" method="POST">
+        Enter Username: <input type="text" name="name" id="name" required><br><br>
+        Enter Password: <input type="password" name="pass" id="pass" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+    
+</body>
+</html>
