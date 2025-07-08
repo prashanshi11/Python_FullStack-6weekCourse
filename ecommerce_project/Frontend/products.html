@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - ShopEasy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-[#222f3e] text-white p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ShopEasy</h1>
+      <nav>
+        <ul class="flex gap-4">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="products.html" class="hover:underline">Products</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li><a href="cart.html" class="hover:underline">Cart</a></li>
+          <li><a href="profile.html" class="hover:underline">Profile</a></li>
+          <li><a href="login.html" class="hover:underline">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mx-auto my-8 px-4">
+    <h2 class="text-3xl font-semibold mb-6">Our Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Product 1 -->
+      <div class="product-card bg-white shadow rounded-lg p-4 text-center"
+           data-id="1" data-name="Product 1 Name" data-price="499">
+        <img src="product1.webp" alt="Product 1" class="mx-auto h-40 w-40 object-cover"/>
+        <h3 class="text-lg font-bold mt-4">Product 1 Name</h3>
+        <p class="text-sm text-gray-600">Short description of Product 1</p>
+        <p class="text-xl text-green-600 font-semibold mt-2">₹499</p>
+        <button class="add-to-cart mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Add to Cart</button>
+      </div>
+
+
+      <!-- Example Product 2 -->
+      <div class="product-card bg-white shadow rounded-lg p-4 text-center"
+           data-id="2" data-name="Product 2 Name" data-price="799">
+        <img src="product2.webp" alt="Product 2" class="mx-auto h-40 w-40 object-cover"/>
+        <h3 class="text-lg font-bold mt-4">Product 2 Name</h3>
+        <p class="text-sm text-gray-600">Short description of Product 2</p>
+        <p class="text-xl text-green-600 font-semibold mt-2">₹799</p>
+        <button class="add-to-cart mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Add to Cart</button>
+      </div>
+
+      <div class="product-card bg-white shadow rounded-lg p-4 text-center"
+           data-id="3" data-name="Product 3 Name" data-price="799">
+        <img src="product3.webp" alt="Product 3" class="mx-auto h-40 w-40 object-cover"/>
+        <h3 class="text-lg font-bold mt-4">Product 3 Name</h3>
+        <p class="text-sm text-gray-600">Short description of Product 3</p>
+        <p class="text-xl text-green-600 font-semibold mt-2">₹799</p>
+        <button class="add-to-cart mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Add to Cart</button>
+      </div>
+      <div class="product-card bg-white shadow rounded-lg p-4 text-center"
+           data-id="4" data-name="Product 4 Name" data-price="799">
+        <img src="product4.webp" alt="Product 4" class="mx-auto h-40 w-40 object-cover"/>
+        <h3 class="text-lg font-bold mt-4">Product 4 Name</h3>
+        <p class="text-sm text-gray-600">Short description of Product 4</p>
+        <p class="text-xl text-green-600 font-semibold mt-2">₹799</p>
+        <button class="add-to-cart mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Add to Cart</button>
+      </div>
+      <div class="product-card bg-white shadow rounded-lg p-4 text-center"
+           data-id="5" data-name="Product 5 Name" data-price="799">
+        <img src="product5.webp" alt="Product 5" class="mx-auto h-40 w-40 object-cover"/>
+        <h3 class="text-lg font-bold mt-4">Product 5 Name</h3>
+        <p class="text-sm text-gray-600">Short description of Product 5</p>
+        <p class="text-xl text-green-600 font-semibold mt-2">₹799</p>
+        <button class="add-to-cart mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Add to Cart</button>
+      </div>
+      <div class="product-card bg-white shadow rounded-lg p-4 text-center"
+           data-id="6" data-name="Product 6 Name" data-price="799">
+        <img src="product6.webp" alt="Product 6" class="mx-auto h-40 w-40 object-cover"/>
+        <h3 class="text-lg font-bold mt-4">Product 6 Name</h3>
+        <p class="text-sm text-gray-600">Short description of Product 6</p>
+        <p class="text-xl text-green-600 font-semibold mt-2">₹799</p>
+        <button class="add-to-cart mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Add to Cart</button>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+  </footer>
+
+  <!-- Link external JS -->
+  <script src="cart.js"></script>
+</body>
+</html>
