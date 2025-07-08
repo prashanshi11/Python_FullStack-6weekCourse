@@ -45,6 +45,17 @@
 | Bonus    | **Flask eCommerce Project**<br>• Fullstack Flask + MySQL Cart System with Auth and Admin Dashboard                                        | `Datasimplewebsite(ecommerce)/` folder:<br>▪ `login.py`, `signup.py`, `add_to_cart.py`, `view_cart.py`, `checkout.py`, `admin.py`, `show_products.py`, `contact.py`, `ecommerce_setup.py`, `login.html`, `signup.html` |
 
 
+---
+
+### 📅 **Week 4: July 7–July 11, 2025**
+
+📍 *Databases and Django Basics*
+
+| Day     | Topics Covered                                                                                                                                                                                                                 | Files Updated                                                                                                                                |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon (7) | **Python with Databases**<br>• Connecting Python to Databases using `psycopg2` / `mysql-connector`<br>• Performing CRUD Operations<br>• Database Design and Normalization<br>• Practice: Build a Database-Driven Python Script | `db_connection.py`, `crud_operations.py`, `normalized_schema.sql`, `product_entry_script.py`                                                 |
+| Tue (8) | **Django Basics**<br>• Introduction to Django Framework<br>• Setting up a Django Project and Apps<br>• Models, Views, and Templates (MVT)<br>• Hands-On: Create a Simple Django App                                            | `django_project/` folder:<br>▪ `manage.py`, `settings.py`, `urls.py`, `models.py`, `views.py`, `templates/index.html`, `templates/base.html` |
+
 
 ---
 
