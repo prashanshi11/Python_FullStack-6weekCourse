@@ -47,6 +47,8 @@
 
 ---
 
+
+
 ### 📅 **Week 4: July 7–July 11, 2025**
 
 📍 *Databases and Django Basics*
@@ -55,6 +57,8 @@
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mon (7) | **Python with Databases**<br>• Connecting Python to Databases using `psycopg2` / `mysql-connector`<br>• Performing CRUD Operations<br>• Database Design and Normalization<br>• Practice: Build a Database-Driven Python Script | `db_connection.py`, `crud_operations.py`, `normalized_schema.sql`, `product_entry_script.py`                                                 |
 | Tue (8) | **Django Basics**<br>• Introduction to Django Framework<br>• Setting up a Django Project and Apps<br>• Models, Views, and Templates (MVT)<br>• Hands-On: Create a Simple Django App                                            | `django_project/` folder:<br>▪ `manage.py`, `settings.py`, `urls.py`, `models.py`, `views.py`, `templates/index.html`, `templates/base.html` |
+| Wed (9) | **Django Models and ORM**<br>• Defining Models and Relationships<br>• Database Migrations and Admin Panel<br>• Querying with Django ORM<br>• Practice: Build a Product Catalog                                                 | `models.py`, `admin.py`, `migrations/`, `views.py`, `urls.py`, `templates/catalog.html`, `db.sqlite3` (or equivalent DB file)                |
+
 
 
 ---
