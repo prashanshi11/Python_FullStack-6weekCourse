@@ -1,0 +1,14 @@
+body {
+    background-color: #72b4ee;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.responsive-img {
+    width: 100vw;      /* 100% of the viewport width */
+    height: 42vw;      /* Maintain aspect ratio */
+    max-width: 100%;   /* Don’t exceed container */
+    display: block;
+    margin: 0 auto;    /* Center the image horizontally */
+}
+
