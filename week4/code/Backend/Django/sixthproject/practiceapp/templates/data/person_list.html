@@ -1,0 +1,7 @@
+<!-- templates/data/person_list.html -->
+<h1>Person List</h1>
+{% for person in people %}
+  {{ person.name }} {{ person.age }}<br>
+{% empty %}
+  No people found
+{% endfor %}
