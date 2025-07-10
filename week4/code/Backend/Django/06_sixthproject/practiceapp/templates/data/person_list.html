@@ -1,7 +1,24 @@
-<!-- templates/data/person_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding person_list</title>
+</head>
+<body>
+  <!-- templates/data/person_list.html -->
 <h1>Person List</h1>
-{% for person in people %}
-  {{ person.name }} {{ person.age }}<br>
-{% empty %}
-  No people found
-{% endfor %}
+<ul>
+  {% for person in people %}
+    <li>{{ person.name }} - {{ person.age }}</li>
+  {% empty %}
+    <li>No people found</li>
+  {% endfor %}  
+</ul>
+  <a href="{% url 'add_person' %}">Add Person</a>
+ 
+
+</body>
+</html>
+
+
