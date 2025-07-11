@@ -53,7 +53,6 @@
 
 📍 *Theme: Databases and Django Basics*
 
----
 
 | Day          | Topics Covered                                                                                                                                                                                                                 | Files/Projects Updated                                                                                                                                                                                      |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -63,7 +62,7 @@
 | **Thu (10)** | **Django Authentication**<br>• User Registration, Login, and Logout<br>• Session Management and Permissions<br>• Securing Routes and Views<br>• Hands-On: Add Authentication to an App                                         | 📁 [`04_fourthproject/`](./code/Backend/Django/04_fourthproject/), [`05_fifthproject_fancyweb/`](./code/Backend/Django/05_fifthproject_fancyweb/)<br>▪ `mainapp/`, login, register, base pages               |
 | **Fri (11)** | **Practice + Relationships**<br>• Django Forms and Template Rendering<br>• ForeignKey, OneToOneField, ManyToManyField<br>• Product Relationships<br>• Hands-On: Add Products, View List, Use Forms                             | 📁 [`06_sixthproject/`](./code/Backend/Django/06_sixthproject/), [`07_seventhproject/`](./code/Backend/Django/07_seventhproject/)<br>▪ `practiceapp/`, `shop/`, product & person CRUD templates              |
 
----
+
 ---
 
 
