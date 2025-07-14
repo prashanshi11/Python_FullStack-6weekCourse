@@ -63,6 +63,16 @@
 
 ---
 
+### 📅 **Week 5: July 14–July 18, 2025**
+
+📍 *Theme: Django REST Framework & API Development*
+
+| Day          | Topics Covered                                                                                                                                                                                                        | Files/Projects Updated                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mon (14)** | **RESTful APIs with Django**<br>• Introduction to Django REST Framework (DRF)<br>• Building and Testing CRUD APIs<br>• Serialization and Authentication in APIs<br>• Practice: Create a Task API with Postman Testing | 📁 [`08_restapiproject`](./week5/code/Backend/Django/08_restapiproject)<br>▪ `taskapp/`, `api/serializers.py`, `views.py`, `urls.py`, `Postman collection` |
+
+---
+
 
 ## 🌐 **GitHubBox: Live Preview for GitHub Projects**
 
