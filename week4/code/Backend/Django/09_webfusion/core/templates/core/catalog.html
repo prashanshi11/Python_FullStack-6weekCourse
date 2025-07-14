@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+</head>
+<body>
+    {% extends 'core/base.html' %}
+{% block content %}
+<h2>Product Catalog</h2>
+<ul>
+  {% for product in products %}
+    <li><strong>{{ product.name }}</strong> – ₹{{ product.price }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+</body>
+</html>
