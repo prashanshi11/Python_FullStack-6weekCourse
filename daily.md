@@ -1,3 +1,4 @@
+
 ## 🗓️ **Weekly Progress Log – Python FullStack Development**
 
 ---
