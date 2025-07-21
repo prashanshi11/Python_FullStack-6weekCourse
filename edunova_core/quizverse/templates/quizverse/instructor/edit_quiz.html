@@ -1,0 +1,18 @@
+{% extends 'global/base.html' %}
+{% block title %}Edit Quiz | EduNova{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="card shadow p-4">
+    <h3 class="mb-3 text-success">✏️ Edit Quiz</h3>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="d-flex justify-content-between">
+        <a href="{% url 'instructor_dashboard' %}" class="btn btn-secondary">← Back</a>
+        <button type="submit" class="btn btn-success">💾 Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

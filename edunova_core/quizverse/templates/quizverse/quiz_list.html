@@ -1,0 +1,21 @@
+{% extends 'global/base.html' %}
+{% block title %}Quizzes | EduNova{% endblock %}
+
+{% block content %}
+<h2>🧠 Available Quizzes</h2>
+<p>Select a quiz to test your knowledge!</p>
+
+<ul class="list-group">
+  {% for quiz in quizzes %}
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    {{ quiz.title }}
+    <div>
+      <a href="{% url 'take_quiz' quiz.id %}" class="btn btn-sm btn-outline-success">Start</a>
+      <a href="{% url 'quiz_leaderboard' quiz.id %}" class="btn btn-sm btn-outline-primary ms-2">🏆 Leaderboard</a>
+    </div>
+  </li>
+  {% empty %}
+    <li class="list-group-item">No quizzes available.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

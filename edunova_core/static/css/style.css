@@ -1,0 +1,57 @@
+/* 🌿 EduNova custom styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+}
+
+.course-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.review-box {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    border-left: 4px solid #198754;
+}
+
+button.btn-green,
+.btn-green {
+    background-color: #198754;
+    color: white;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* Add subtle background animation */
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d9f99d 0%, #bbf7d0 100%);
+    z-index: -1;
+    opacity: 0.1;
+    animation: backgroundPulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundPulse {
+    0% { opacity: 0.08; }
+    100% { opacity: 0.15; }
+}

@@ -1,0 +1,43 @@
+{% extends 'global/base.html' %}
+{% block title %}Instructor Dashboard | EduNova{% endblock %}
+{% if user.is_authenticated and user.groups.first.name == "Instructor" %}
+  <a href="{% url 'instructor_dashboard' %}">Instructor Dashboard</a>
+{% endif %}
+
+
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4 text-center">🧑‍🏫 Instructor Dashboard</h2>
+
+    <div class="text-end mb-4">
+        <a href="{% url 'create_quiz' %}" class="btn btn-success">➕ Create New Quiz</a>
+    </div>
+
+    {% if quizzes %}
+    <div class="row">
+        {% for quiz in quizzes %}
+        <div class="col-md-6">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ quiz.title }}</h5>
+                    <p class="card-text">{{ quiz.description|truncatewords:20 }}</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'add_question' quiz.id %}" class="btn btn-outline-primary btn-sm">➕ Add Questions</a>
+                        <a href="{% url 'leaderboard' quiz.id %}" class="btn btn-outline-secondary btn-sm">🏆 Leaderboard</a>
+                        <a href="{% url 'export_pdf' quiz.id %}" class="btn btn-outline-dark btn-sm">📄 Export</a>
+                        <a href="{% url 'export_excel' quiz.id %}" class="btn btn-outline-success btn-sm">📊 Export Excel</a>
+                        <a href="{% url 'edit_quiz' quiz.id %}" class="btn btn-sm btn-warning">✏️ Edit</a>
+                        <a href="{% url 'delete_quiz' quiz.id %}" class="btn btn-sm btn-danger">🗑️ Delete</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p class="text-muted text-center">You haven't created any quizzes yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

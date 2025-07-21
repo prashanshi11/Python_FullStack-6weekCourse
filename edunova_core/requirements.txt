@@ -1,0 +1,5 @@
+Django>=5.2.0
+djangorestframework>=3.15.0
+xhtml2pdf>=0.2.15
+psycopg2-binary>=2.9.9  # if you plan to use PostgreSQL
+Pillow>=10.2.0          # if you handle image uploads later

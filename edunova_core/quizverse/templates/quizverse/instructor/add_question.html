@@ -1,0 +1,58 @@
+{% extends 'global/base.html' %}
+{% block title %}Add Question | EduNova{% endblock %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">➕ Add Question to "{{ quiz.title }}"</h4>
+        </div>
+        <div class="card-body">
+          <form method="POST">
+            {% csrf_token %}
+            
+            <!-- Question Form -->
+            <div class="mb-4">
+              <h5>📝 Question</h5>
+              {% for field in q_form %}
+                <div class="mb-3">
+                  <label class="form-label">{{ field.label }}</label>
+                  {{ field|add_class:"form-control" }}
+                  {% if field.errors %}
+                    <div class="text-danger">{{ field.errors|striptags }}</div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+
+            <!-- Choices Formset -->
+            <div class="mb-4">
+              <h5>📌 Choices</h5>
+              {{ c_formset.management_form }}
+              {% for form in c_formset %}
+                <div class="border rounded p-3 mb-3">
+                  {% for field in form.visible_fields %}
+                    <div class="mb-2">
+                      <label class="form-label">{{ field.label }}</label>
+                      {{ field|add_class:"form-control" }}
+                      {% if field.errors %}
+                        <div class="text-danger">{{ field.errors|striptags }}</div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">➕ Add Question & Choices</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_dsahboard</title>
+</head>
+<body>
+    <h3>🧭 Your Course Progress</h3>
+
+{% for enrollment in enrollments %}
+  <div class="course-progress">
+    <h4>{{ enrollment.course.title }}</h4>
+
+    {% with total=enrollment.course.lesson_set.count %}
+      {% with completed=enrollment.course.lessoncompletion_set.filter(student=request.user).count %}
+        <p>📚 Completed {{ completed }} of {{ total }} lessons</p>
+      {% endwith %}
+    {% endwith %}
+  </div>
+{% empty %}
+  <p>You haven't enrolled in any courses yet.</p>
+{% endfor %}
+
+{% for e in enrollments %}
+  <div>
+    <strong>{{ e.course.title }}</strong>
+    {% with total=e.course.lesson_set.count completed=e.course.lesson_set.all|length %}
+      - Completed {{ completed }} of {{ total }}
+    {% endwith %}
+
+    <a href="{% url 'generate_certificate' e.course.id %}">🎓 Download Certificate</a>
+  </div>
+{% endfor %}
+
+
+</body>
+</html>

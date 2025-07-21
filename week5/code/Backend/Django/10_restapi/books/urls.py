@@ -1,10 +1,7 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import BookViewSet  
-
-router = DefaultRouter()
-router.register(r'books', BookViewSet)
+from django.urls import path
+from .views import book_list, book_detail
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('books/', book_list, name='book-list'),
+    path('books/<int:pk>/', book_detail, name='book-detail'),
 ]

@@ -1,0 +1,11 @@
+{% extends 'global/base.html' %}
+{% block title %}Quiz Result | EduNova{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2>🎉 Quiz Completed!</h2>
+    <p class="lead">You scored <strong>{{ score }}</strong> out of <strong>{{ total }}</strong>.</p>
+    <a href="{% url 'quiz_list' %}" class="btn btn-outline-success">← Back to Quizzes</a>
+    <a href="{% url 'quiz_history' %}" class="btn btn-outline-info ms-2">📜 My History</a>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!-- templates/course_galaxy/lesson_detail.html -->
+{% extends 'global/base.html' %}
+{% block title %}{{ lesson.title }} | EduNova{% endblock %}
+
+{% block content %}
+<h2>{{ lesson.title }}</h2>
+<p>{{ lesson.content|linebreaks }}</p>
+
+{% if lesson.video_url %}
+    <div class="ratio ratio-16x9 my-4">
+        <iframe src="{{ lesson.video_url }}" title="{{ lesson.title }}" allowfullscreen></iframe>
+    </div>
+{% endif %}
+
+{% if not completed %}
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-success">✅ Mark as Completed</button>
+    </form>
+{% else %}
+    <div class="alert alert-success mt-3">🎉 You completed this lesson!</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'global/base.html' %}
+{% block title %}Add Choices{% endblock %}
+{% block content %}
+<h2>Add Choices for Question: {{ question.text }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="add_done" class="btn btn-success">Save & Finish</button>
+    <button type="submit" name="add_another" class="btn btn-outline-primary">Add Another Choice</button>
+</form>
+{% endblock %}

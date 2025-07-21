@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+{% extends 'global/base.html' %}
+{% block title %}EduNova 🌠 | Your Learning Galaxy{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4">Welcome to <span class="text-success">EduNova</span></h1>
+    <p class="lead">🚀 Launch your learning journey with interactive courses, quizzes, and certifications.</p>
+    <a href="/courses/" class="btn btn-green btn-lg mt-3">📚 Start Learning</a>
+</div>
+
+<hr>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <h4>📘 Explore Courses</h4>
+        <p>Learn from structured, instructor-led content tailored just for you.</p>
+    </div>
+    <div class="col-md-4">
+        <h4>🧠 Take Quizzes</h4>
+        <p>Reinforce your learning with hands-on assessments and fun challenges.</p>
+    </div>
+    <div class="col-md-4">
+        <h4>📜 Get Certified</h4>
+        <p>Earn certificates and track your progress across all topics.</p>
+    </div>
+</div>
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instructor_dashboard</title>
+</head>
+<body>
+    <h2>Instructor Dashboard</h2>
+<a href="{% url 'add_course' %}">➕ Add New Course</a>
+<ul>
+  {% for course in courses %}
+    <li>
+      <strong>{{ course.title }}</strong> -
+      <a href="{% url 'add_lesson' course.id %}">Add Lesson</a>
+    </li>
+  {% empty %}
+    <li>No courses yet.</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

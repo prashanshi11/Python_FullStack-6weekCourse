@@ -1,0 +1,44 @@
+{% extends 'global/base.html' %}
+
+{% block title %}Courses | EduNova{% endblock %}
+
+{% block content %}
+<h2>📘 All Courses</h2>
+
+<!-- ✅ Combined search and category filter -->
+<form method="get" class="row mb-4">
+    <div class="col-md-6">
+        <input type="text" name="q" class="form-control" placeholder="Search..." value="{{ search_query }}">
+    </div>
+    <div class="col-md-4">
+        <select name="category" class="form-select" onchange="this.form.submit()">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}" {% if selected_category == category.id|stringformat:"s" %}selected{% endif %}>
+                    {{ category.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-success w-100">Search</button>
+    </div>
+</form>
+
+<!-- ✅ Course grid -->
+<div class="row">
+    {% for course in courses %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">{{ course.title }}</h5>
+                <p class="card-text">{{ course.description|truncatechars:100 }}</p>
+                <a href="{% url 'course_detail' course.id %}" class="btn btn-primary btn-sm">View Course</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No courses found.</p>
+    {% endfor %}
+</div>
+{% endblock %}
