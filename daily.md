@@ -1,7 +1,6 @@
 
 ## 🗓️ **Weekly Progress Log – Python FullStack Development**
 
-
 ---
 ### 📅 **Week 1: June 16–June 20, 2025**
 
